@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Aprendiendo JabaScript</title>
+  </head>
+  <body>
+    <h1>DADO DE LA SUERTE!</h1>
+    <br />
+    <p id="salida"></p>
+
+    <script>
+      //let dado = 0;
+      let random = Math.random(); // 0.01 ... 0.99
+
+      console.log("random:", random);
+
+      let suerte = random * 8; //  numero aletorio (1.??-5.??) -> 1 .. 5
+
+      //console.log("suerte:", suerte);
+
+      //let dado2 = parseInt(suerte) + 1; //( 1 ... 5) + 1
+
+      //(0,1) * 10 = 0 - 9.?? +1
+      // let dado = parseInt(Math.random() * 10) + 1;
+      // (0,1) * 10 = 9.74 = 10
+
+      /* while (dado == 0) {
+        dado = Math.round(Math.random() * 8);
+        console.log("dado:", dado);
+      } */
+
+      let dado = Math.round(Math.random() * 8);
+      console.log("dado:", dado);
+
+      let obj1 = document.getElementById("salida");
+
+      /*  if (dado == 1) {
+        obj1.innerHTML = ` <img src='images//dado0.png'/> `;
+      } else if (dado == 2) {
+        obj1.innerHTML = ` <img src='images//dado00.png'/> `;
+      } else if (dado == 3) {
+        obj1.innerHTML = ` <img src='images//dado000.png'/> `;
+      } else if (dado == 4) {
+        obj1.innerHTML = ` <img src='images//dado0000.png'/> `;
+      } else if (dado == 5) {
+        obj1.innerHTML = ` <img src='images//dado5.png'/> `;
+      } else if (dado == 6) {
+        obj1.innerHTML = ` <img src='images//dado6.png'/> `;
+      }  */
+
+      switch (dado) {
+        case 1:
+          obj1.innerHTML = ` <img src='images//dado0.png'/> `;
+          break;
+        case 2:
+          obj1.innerHTML = ` <img src='images//dado00.png'/> `;
+          break;
+        case 3:
+          obj1.innerHTML = ` <img src='images//dado000.png'/> `;
+          break;
+        case 4:
+          obj1.innerHTML = ` <img src='images//dado000.png'/> `;
+          break;
+        case 5:
+          obj1.innerHTML = ` <img src='images//dado5.png'/> `;
+          break;
+        case 6:
+          obj1.innerHTML = ` <img src='images//dado6.png'/> `;
+          break;
+        default:
+          obj1.innerHTML = ` <img src='images//manten.png'/> `;
+          break;
+      }
+    </script>
+    <br />
+    <h4>Recarga la página para continuar.</h4>
+    <h4>Para salir de la página cierra la pestaña.</h4>
+  </body>
+</html>
